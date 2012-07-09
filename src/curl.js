@@ -599,8 +599,8 @@
 			// IE will load the script sync if it's in the cache, so
 			// indicate the current resource definition if this happens.
 			activeScripts[def.id] = el;
-			// use insertBefore to keep IE from throwing Operation Aborted (thx Bryan Forbes!)
-			head.insertBefore(el, head.firstChild);
+
+			head.appendChild(el);
 
 			// the js! plugin uses this
 			return el;
